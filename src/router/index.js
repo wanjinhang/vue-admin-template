@@ -79,15 +79,13 @@ export const constantRoutes = [
   {
     path: '/system',
     component: Layout,
-    redirect: '/example/table',
     name: '系统管理',
-    meta: { title: '系统管理', icon: 'el-icon-s-help' },
+    meta: { title: '系统管理', icon: 'a-bianzu30beifen' },
     children: [
       {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        path: 'sysRole',
+        component: () => import('@/views/system/sysRole/list'),
+        meta: { title: '角色管理', icon: 'a-bianzu23' }
       },
       {
         path: 'tree',
