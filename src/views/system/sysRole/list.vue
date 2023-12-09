@@ -105,7 +105,7 @@
       </el-form>
       <span slot="footer" class="dialog-footer">
         <el-button
-          @click="dialogVisible = false"
+          @click="cancel()"
           size="small"
           icon="el-icon-refresh-right"
           >取 消</el-button
@@ -215,6 +215,11 @@ export default {
       api.getById(id).then((response) => {
         this.sysRole = response.data;
       });
+    },
+    //取消修改
+    cancel() { 
+      this.dialogVisible = false;
+      this.sysRole = {};
     },
     // 修改更新提交
     updateData() {
